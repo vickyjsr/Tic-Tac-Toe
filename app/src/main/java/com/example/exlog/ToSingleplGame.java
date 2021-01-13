@@ -212,7 +212,7 @@ public class ToSingleplGame extends AppCompatActivity {
     }
 
 
-   void AutoPlay(){
+    void AutoPlay(){
         ArrayList<Integer> emptyBlocks = new ArrayList<Integer>();
 
         for(int i=1; i<=9; i++){
@@ -251,8 +251,8 @@ public class ToSingleplGame extends AppCompatActivity {
             PlayGame(selectedBock, selectedImage);
         }
     }
-/*
-    int index()
+
+   /* int index()
     {
         int index=-1;
         for(int i=0;i<emptyBlocks.size();i++)
@@ -263,9 +263,10 @@ public class ToSingleplGame extends AppCompatActivity {
     }
 
     private int miniMax(Integer integer) {
-        
+
         return integer;
     }
+
     */
 
     void ResetGame(){
