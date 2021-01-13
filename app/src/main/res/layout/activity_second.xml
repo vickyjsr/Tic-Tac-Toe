@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="#fffff0"
+    >
+
+    <ImageButton
+        android:id="@+id/log_out"
+        android:layout_width="77dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_logouticon"
+        android:contentDescription="@string/todo" />
+
+    <ImageButton
+        android:id="@+id/singlepl"
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:background="@drawable/ic_singleplayer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317" />
+
+    <ImageButton
+        android:id="@+id/multipl"
+        android:layout_width="153dp"
+        android:layout_height="144dp"
+        android:background="@drawable/ic_multiplayer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="59dp"
+        android:layout_height="22dp"
+        android:fontFamily="monospace"
+        android:text="Single"
+        android:textAlignment="center"
+        android:textColor="#0C0C0C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="35dp"
+        android:layout_height="22dp"
+        android:fontFamily="monospace"
+        android:text="Duo"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#2B2929"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

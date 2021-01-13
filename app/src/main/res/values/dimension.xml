@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="board_size">320dp</dimen>
+    <dimen name="size_player_image">100dp</dimen>
+
+
+</resources>
