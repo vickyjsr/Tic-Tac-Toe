@@ -212,7 +212,8 @@ public class ToSingleplGame extends AppCompatActivity {
     }
 
 
-    void AutoPlay(){
+   void AutoPlay(){
+        ArrayList<Integer> emptyBlocks = new ArrayList<Integer>();
 
         for(int i=1; i<=9; i++){
             if(!(Player1.contains(i) || Player2.contains(i))){
@@ -250,7 +251,7 @@ public class ToSingleplGame extends AppCompatActivity {
             PlayGame(selectedBock, selectedImage);
         }
     }
-
+/*
     int index()
     {
         int index=-1;
@@ -265,6 +266,7 @@ public class ToSingleplGame extends AppCompatActivity {
         
         return integer;
     }
+    */
 
     void ResetGame(){
         gameState = 1;
