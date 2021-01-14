@@ -8,10 +8,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class Multi_choose extends AppCompatActivity {
 
     private ImageButton local,online,back;
+    private long backPresssedTime;
+    private Toast backToast;
 
 
     @Override
@@ -61,6 +64,14 @@ public class Multi_choose extends AppCompatActivity {
                 finish();
             }
         });
+
+    }
+    @Override
+    public void onBackPressed(){
+
+        startActivity(new Intent(this,SecondActivity.class));
+        finish();
+
 
     }
 }
