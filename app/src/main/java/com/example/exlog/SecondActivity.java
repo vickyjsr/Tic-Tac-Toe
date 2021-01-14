@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,7 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private ImageButton logout,singlePlayer,duoPlayer;
+    private ImageButton logout,singlePlayer,duoPlayer,info;
     private FirebaseAuth firebaseAuth;
     private long backPresssedTime;
     private Toast backToast;
@@ -30,6 +31,13 @@ public class SecondActivity extends AppCompatActivity {
 
         singlePlayer=(ImageButton)findViewById(R.id.singlepl);
         duoPlayer=(ImageButton)findViewById(R.id.multipl);
+        info = (ImageButton)findViewById(R.id.info);
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://q4gaha7wghudomzmwqcv6w-on.drv.tw/Profile/profile1.html")));
+            }
+        });
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +74,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, Multi_choose.class);
                 startActivity(intent);
-                //finish();
+                finish();
 
             }
         });
