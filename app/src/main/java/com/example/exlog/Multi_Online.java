@@ -84,7 +84,8 @@ public class Multi_Online extends AppCompatActivity implements View.OnClickListe
         if(backPresssedTime + 2000 > System.currentTimeMillis())
         {
             backToast.cancel();
-            startActivity(new Intent(this,Multi_choose.class));finish();
+            startActivity(new Intent(this,Multi_choose.class));
+            finish();
             return;
         }
         else
