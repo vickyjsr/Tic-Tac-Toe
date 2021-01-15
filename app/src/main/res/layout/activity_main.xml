@@ -17,15 +17,16 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="302dp"
-        android:layout_height="369dp"
+        android:layout_width="303dp"
+        android:layout_height="402dp"
 
         android:layout_alignParentTop="true"
+        android:layout_marginBottom="92dp"
         android:background="@drawable/radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <EditText
@@ -76,10 +77,10 @@
             android:layout_marginBottom="127dp"
 
             android:background="@drawable/ic_login"
+            android:contentDescription="@string/todo20"
             android:text="@string/login"
             android:textColor="#3E3B3B"
-            app:layout_constraintTop_toBottomOf="@+id/password"
-            android:contentDescription="@string/todo20" />
+            app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <ImageButton
             android:id="@+id/googlesignbutton"
@@ -119,15 +120,15 @@
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="82dp"
-            android:layout_height="31dp"
+            android:layout_width="86dp"
+            android:layout_height="32dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="54dp"
-            android:layout_marginTop="289dp"
-            android:layout_marginEnd="165dp"
+            android:layout_marginTop="321dp"
+            android:layout_marginEnd="163dp"
             android:layout_marginBottom="49dp"
             android:text="@string/register1"
             android:textAlignment="center"
@@ -150,9 +151,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.283" />
+        app:layout_constraintVertical_bias="0.383" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

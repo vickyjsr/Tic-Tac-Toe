@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         google_signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 signIn();
                 progressDialog.setMessage("What is happenning XD :)");
                 progressDialog.show();
@@ -194,9 +195,9 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    private void validation(String userName,String userPassword )
+    private void validation(final String userName, String userPassword )
     {
-        progressDialog.setMessage("What is happenning XD :)");
+        progressDialog.setMessage("Wait :)");
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(userName,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -205,7 +206,9 @@ public class MainActivity extends AppCompatActivity {
                 if(task.isSuccessful())
                 {
                     progressDialog.dismiss();
-                    Toast.makeText(MainActivity.this,"Login Succesfull",Toast.LENGTH_SHORT).show();
+                    String s = userName.substring(0,userName.indexOf('@'));
+                    s.replaceAll(".", "");
+                    Toast.makeText(MainActivity.this,"Login Succesfull "+ s,Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(MainActivity.this,SecondActivity.class);
                     startActivity(intent);
                     finish();
@@ -217,24 +220,13 @@ public class MainActivity extends AppCompatActivity {
                     counter--;
                     if(counter==0)
                     {
+                        Toast.makeText(MainActivity.this,"Button Disabled",Toast.LENGTH_SHORT).show();
                         login.setEnabled(false);
                     }
                 }
             }
         });
 
-//        if((userName.equals("Admin"))&&(userPassword.equals("123456")))
-//        {
-//            Intent intent=new Intent(MainActivity.this,SecondActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
-//
-//        else
-//        {
-//            Toast.makeText(getApplicationContext(),"wrong email or password",Toast.LENGTH_SHORT).show();
-//
-//        }
 
     }
 }

@@ -42,9 +42,10 @@ import java.util.Set;
 public class Online_userActivity extends AppCompatActivity {
 
     ListView lv_loginusers,lv_requestedusers;
-    ArrayList<String> list_loginUsers = new ArrayList<String>();
 
+    ArrayList<String> list_loginUsers = new ArrayList<String>();
     ArrayList<String> list_requestedUsers = new ArrayList<String>();
+
     TextView tvuserid,tvsendRequestid,tvAcceptRequestid;
     Button generateID,acceptedID;
     EditText etID;

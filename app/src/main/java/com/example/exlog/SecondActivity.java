@@ -38,7 +38,7 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://q4gaha7wghudomzmwqcv6w-on.drv.tw/Profile/profile1.html")));
             }
         });
-        
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

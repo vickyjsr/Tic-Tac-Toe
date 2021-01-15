@@ -4,14 +4,16 @@ public class UserProfile {
 
     String userName, phone,  userEmail,name;
 
-    public UserProfile(){
-    }
 
     public UserProfile(String userName,String phone, String userEmail, String  name) {
         this.userName = userName;
         this.userEmail = userEmail;
         this.userName = userName;
         this.phone=phone;
+    }
+
+    public UserProfile() {
+
     }
 
     public String getname() {

@@ -4,4 +4,10 @@
     <solid android:color="#ADD8E6"/>
 
     <corners android:radius="25dp"/>
+    <gradient
+        android:startColor="#d3ddde"
+        android:endColor="#bbd9db"
+        android:angle="270"/>
+
+<!--    linear-gradient(to bottom right, #fdfdfd, #bbd9db);-->
 </shape>
