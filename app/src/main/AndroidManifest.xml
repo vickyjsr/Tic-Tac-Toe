@@ -9,18 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".Online_userActivity"></activity>
-        <activity android:name=".Multi_Online" />
-        <activity android:name=".Multi_choose" />
-        <activity android:name=".Single" />
-        <activity android:name=".MultiPlayer" />
-        <activity android:name=".ToSingleplGame" />
+
+        <activity android:name=".Online_userActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".Multi_Online"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".Multi_choose"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".Single"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".MultiPlayer"
+            android:screenOrientation="portrait"  />
+
+        <activity android:name=".ToSingleplGame"
+            android:screenOrientation="portrait" />
+
         <activity
             android:name=".RegistrationActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".SecondActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">

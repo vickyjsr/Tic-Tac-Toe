@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         FirebaseUser user1=mAuth.getCurrentUser();
+
+
+
 //        if(user1!=null)
 //        {
 //            startActivity(new Intent(MainActivity.this,SecondActivity.class));

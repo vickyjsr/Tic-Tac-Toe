@@ -16,7 +16,7 @@
         android:layout_width="171dp"
         android:layout_height="38dp"
 
-        android:text="@string/multiplayer1"
+        android:text="Offline"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"

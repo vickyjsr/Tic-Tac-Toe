@@ -154,11 +154,13 @@ public class ToSingleplGame extends AppCompatActivity {
                 selectedImage.setImageResource(R.drawable.ic_cross);
                 Player1.add(selectedBlock);
                 activePlayer = 2;
+                CheckWinner();
                 AutoPlay();
             }else if (activePlayer == 2) {
                 selectedImage.setImageResource(R.drawable.ic_zero);
                 Player2.add(selectedBlock);
                 activePlayer = 1;
+                CheckWinner();
             }
 
             selectedImage.setEnabled(false);
@@ -169,6 +171,19 @@ public class ToSingleplGame extends AppCompatActivity {
 
     void CheckWinner(){
         int winner = 0;
+
+
+        /********* for Player 2 *********/
+        if(Player2.contains(1) && Player2.contains(2) && Player2.contains(3)){ winner = 2; }
+        if(Player2.contains(4) && Player2.contains(5) && Player2.contains(6)){ winner = 2; }
+        if(Player2.contains(7) && Player2.contains(8) && Player2.contains(9)){ winner = 2; }
+
+        if(Player2.contains(1) && Player2.contains(4) && Player2.contains(7)){ winner = 2; }
+        if(Player2.contains(2) && Player2.contains(5) && Player2.contains(8)){ winner = 2; }
+        if(Player2.contains(3) && Player2.contains(6) && Player2.contains(9)){ winner = 2; }
+
+        if(Player2.contains(1) && Player2.contains(5) && Player2.contains(9)){ winner = 2; }
+        if(Player2.contains(3) && Player2.contains(5) && Player2.contains(7)){ winner = 2; }
 
         /********* for Player 1 *********/
         if(Player1.contains(1) && Player1.contains(2) && Player1.contains(3)){ winner = 1; }
@@ -183,17 +198,6 @@ public class ToSingleplGame extends AppCompatActivity {
         if(Player1.contains(3) && Player1.contains(5) && Player1.contains(7)){ winner = 1; }
 
 
-        /********* for Player 2 *********/
-        if(Player2.contains(1) && Player2.contains(2) && Player2.contains(3)){ winner = 2; }
-        if(Player2.contains(4) && Player2.contains(5) && Player2.contains(6)){ winner = 2; }
-        if(Player2.contains(7) && Player2.contains(8) && Player2.contains(9)){ winner = 2; }
-
-        if(Player2.contains(1) && Player2.contains(4) && Player2.contains(7)){ winner = 2; }
-        if(Player2.contains(2) && Player2.contains(5) && Player2.contains(8)){ winner = 2; }
-        if(Player2.contains(3) && Player2.contains(6) && Player2.contains(9)){ winner = 2; }
-
-        if(Player2.contains(1) && Player2.contains(5) && Player2.contains(9)){ winner = 2; }
-        if(Player2.contains(3) && Player2.contains(5) && Player2.contains(7)){ winner = 2; }
 
 
 

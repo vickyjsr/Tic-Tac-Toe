@@ -26,19 +26,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.049" />
 
+
     <ImageButton
         android:id="@+id/back2"
         android:layout_width="77dp"
         android:layout_height="83dp"
         android:background="@drawable/ic_back_arrow_2"
+        android:contentDescription="@string/todo7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.931"
-        android:contentDescription="@string/todo7" />
-
+        app:layout_constraintTop_toBottomOf="@+id/l3"
+        app:layout_constraintVertical_bias="0.539" />
 
     <TextView
         android:id="@+id/text_view_p1"

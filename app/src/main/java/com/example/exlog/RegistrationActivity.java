@@ -1,8 +1,10 @@
 package com.example.exlog;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +23,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private ImageButton loginback,registolog;
     private EditText name,password2,phone,username1,email;
     private FirebaseAuth firebaseAuth;
+    private long backPresssedTime;
+    private Toast backToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +45,22 @@ public class RegistrationActivity extends AppCompatActivity {
         loginback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(RegistrationActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
+                AlertDialog.Builder builder =new AlertDialog.Builder(RegistrationActivity.this);
+                builder.setMessage("Are you sure!!").setCancelable(false).setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        finish();
+                        startActivity(new Intent(RegistrationActivity.this,MainActivity.class));
+                    }
+                }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
 
             }
         });
@@ -96,5 +113,22 @@ public class RegistrationActivity extends AppCompatActivity {
         UserProfile userProfile = new UserProfile(username1.getText().toString(),phone.getText().toString(), email.getText().toString(), name.getText().toString());
         myRef.setValue(userProfile);
     }
+    @Override
+    public void onBackPressed() {
 
+        if(backPresssedTime + 2000 > System.currentTimeMillis())
+        {
+            backToast.cancel();
+            startActivity(new Intent(this,MainActivity.class));
+            finish();
+            return;
+        }
+        else
+        {
+            backToast= Toast.makeText(getApplicationContext(),"Press Back Again to Exit!!",Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+        backPresssedTime = System.currentTimeMillis();
+
+    }
 }
