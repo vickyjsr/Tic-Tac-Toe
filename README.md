@@ -1,4 +1,6 @@
 # Tic-Tac-Toe
-A single &amp; Online | Offline Multiplayer game. Still working on the online part.
+A Offline single &amp;  Multiplayer game.
 
 java & Android Studio.
+
+
